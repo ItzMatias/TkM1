@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje para un Umpalumpa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #fddde6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .envelope {
+            background: white;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
+        .envelope:hover {
+            transform: scale(1.02);
+        }
+        .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: left;
+        }
+        .show .message {
+            display: block;
+        }
+        h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #d6336c;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope" onclick="toggleMessage()">
+        <h2>📬 Mensaje importante para ti</h2>
+        <div class="message" id="message">
+            <p>💌 Mensaje para un Umpalumpa</p>
+            <p>Hola, Elfo oscuro 🖤.<br>
+            Quería recordarte algo:<br>
+            Te quiero muchísimo. Más de lo que puedo explicar por mensaje, y más de lo que vos misma te das cuenta a veces.<br>
+            Sos única, divertida, intensa y un poquitito mucho dramática.<br>
+            Pero por sobre todo: sos mi umpalumpa única.<br><br>
+            Con amor Escarbadientes 🤙.</p>
+        </div>
+    </div>
+
+    <audio autoplay loop>
+        <source src="https://ia801302.us.archive.org/28/items/frances-limon-remix-tiktok/Frances%20Limon%20Remix%20TikTok.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function toggleMessage() {
+            document.querySelector('.envelope').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
